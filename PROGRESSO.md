@@ -35,7 +35,14 @@ Todos os comandos terminaram com sucesso. No PowerShell, o VS Code e o npm foram
 - Lucas escolheu a opção B, Editorial clara, em 20 de novembro de 2026, e autorizou a divulgação do telefone e do e-mail informados na página.
 - A primeira versão reúne apresentação, criação de sites, manutenção mensal e uma seção de contato. A fachada ilustrativa foi gerada com ImageGen.
 - O primeiro commit foi registrado na branch `main` com o endereço de autoria `noreply` da conta GitHub de Lucas, configurado somente neste repositório.
-- Lucas autorizou publicar o portfólio. O site vai começar com uma página. Quando houver demonstrações prontas, a seção Projetos poderá linkar para uma página separada de cada demonstração.
+- O site começa com uma página. Quando houver demonstrações prontas, a seção Projetos poderá linkar para uma página separada de cada demonstração.
+
+## Publicação no GitHub
+
+- Lucas autorizou a publicação com os contatos profissionais fornecidos.
+- O código está no [repositório público](https://github.com/lucasempresa701-create/lucas-desenvolvimento-web) na branch `main`.
+- O GitHub Pages usa o [fluxo Publicar portfólio](.github/workflows/pages.yml) para hospedar os arquivos de `portfolio/`.
+- A [primeira publicação](https://github.com/lucasempresa701-create/lucas-desenvolvimento-web/actions/runs/44785491499) terminou com sucesso. A [página pública](https://lucasempresa701-create.github.io/lucas-desenvolvimento-web/) foi aberta no navegador, e os recursos estáticos e os destinos dos links de contato foram conferidos.
 
 ## Verificações do portfólio — 20 de novembro de 2026
 

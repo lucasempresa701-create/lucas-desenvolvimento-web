@@ -2,6 +2,8 @@
 
 Projeto de Lucas Oliveira Santos para aprender desenvolvimento web na prática, construir um portfólio no GitHub e desenvolver um negócio de criação e manutenção de sites para pequenos comércios.
 
+[Visitar o portfólio publicado](https://lucasempresa701-create.github.io/lucas-desenvolvimento-web/)
+
 ## Projeto 1 — Desenvolvimento Web Freelancer
 
 O trabalho começa pelo site profissional de Lucas. Em seguida, serão criados sites demonstrativos, pesquisados possíveis clientes manualmente e apresentadas propostas aos proprietários interessados. Após a venda, o trabalho inclui entrega, gestão do projeto e manutenção contratada.
