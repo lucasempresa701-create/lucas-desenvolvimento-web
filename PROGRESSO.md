@@ -6,7 +6,7 @@
 - [x] 2. Apresentar duas opções visuais e registrar a escolha de Lucas.
 - [x] 3. Preparar a pasta `portfolio/` dentro do diretório do projeto.
 - [x] 4. Criar `index.html`, `style.css`, `script.js`, `assets/` e o README do portfólio.
-- [x] 5. Implementar o cabeçalho, a apresentação inicial e a navegação até as seções de serviços e contato. A ativação de um canal direto continua pendente.
+- [x] 5. Implementar o cabeçalho, a apresentação inicial e a navegação até as seções de serviços e contato, com telefone e e-mail clicáveis.
 - [x] 6. Testar no navegador, verificar erros, registrar o primeiro commit Git local e documentar a publicação. A criação do repositório público e o envio dependem de autorização explícita.
 
 A pasta do projeto contém a documentação inicial e a primeira versão do portfólio. O Projeto 2 está registrado no roadmap.
@@ -32,14 +32,15 @@ Todos os comandos terminaram com sucesso. No PowerShell, o VS Code e o npm foram
 ## Decisões e próximas tarefas
 
 - O portfólio começa com HTML5, CSS3 e JavaScript puro, sem dependências.
-- Lucas escolheu a opção B, Editorial clara, em 20 de novembro de 2026. O canal profissional de contato será definido separadamente.
+- Lucas escolheu a opção B, Editorial clara, em 20 de novembro de 2026, e autorizou a divulgação do telefone e do e-mail informados na página.
 - A primeira versão reúne apresentação, criação de sites, manutenção mensal e uma seção de contato. A fachada ilustrativa foi gerada com ImageGen.
 - O primeiro commit foi registrado na branch `main` com o endereço de autoria `noreply` da conta GitHub de Lucas, configurado somente neste repositório.
-- Após revisar o conteúdo e definir a visibilidade do repositório no GitHub, aguardar a autorização explícita para publicar.
+- Lucas autorizou publicar o portfólio. O site vai começar com uma página. Quando houver demonstrações prontas, a seção Projetos poderá linkar para uma página separada de cada demonstração.
 
 ## Verificações do portfólio — 20 de novembro de 2026
 
 - Chrome em oito larguras entre 320 e 1440 px, sem rolagem horizontal.
 - Navegação por teclado com foco visível, link de salto ao conteúdo e abertura e fechamento do menu móvel. O foco acompanha a navegação e retorna ao botão ao fechar com Escape.
 - Links internos, carregamento de imagens e abertura direta de `index.html` verificados. A navegação permaneceu visível com JavaScript desativado.
+- Links de telefone e e-mail conferidos no Chrome, incluindo a ordem de foco pelo teclado. A verificação não acionou ligação ou envio de e-mail.
 - Console e recursos carregados sem erros durante os testes. Nenhum teste foi feito em dispositivo móvel físico ou leitor de tela.
