@@ -14,6 +14,17 @@ No Explorador de Arquivos, abra a pasta do projeto, entre em `portfolio` e dê d
 | `style.css` | Cores, fontes e layout. As regras `@media` adaptam a navegação e as colunas para telas estreitas. |
 | `script.js` | Abre e fecha o menu em telas estreitas. `aria-expanded` informa o estado do botão aos leitores de tela. Com JavaScript desativado, os links continuam visíveis. |
 | `assets/` | Imagens locais do site. |
+| `projetos/` | Páginas de demonstração acessíveis pela seção Projetos. |
+
+## Demonstração da barbearia
+
+A [Barbearia Fio de Rua](projetos/barbearia/index.html) é fictícia. A identidade escura com verde e dourado diferencia a demonstração do portfólio editorial claro.
+
+O HTML apresenta serviços, durações e horários. O JavaScript usa o serviço e a data escolhidos para oferecer horários de 30 em 30 minutos em que o serviço cabe antes do fechamento. O formulário mostra um resumo no navegador, sem coletar dados ou criar reservas.
+
+A [fotografia ilustrativa](projetos/barbearia/assets/interior-barbearia.jpg) foi gerada com a ferramenta ImageGen integrada. A solicitação original foi a seguinte.
+
+> Create one horizontal 3:2 photorealistic editorial photograph for the hero of Fio de Rua, a fictional Brazilian neighborhood barbershop website. View from the entrance into a compact, authentic and well-kept barbershop: one black leather vintage barber chair with patina in the right-center foreground, a large rectangular wall mirror with an old walnut frame, an oiled wood counter, neatly arranged combs and tools, and a single warm brass wall lamp. Mid-century detail, limewashed gray-green walls, charcoal and dark olive shadows, amber highlights and soft natural side light, restrained film grain, clean architectural composition. Enough detail and contrast to read at small sizes. No people, no words, no logos, no sign, no watermark.
 
 ## Publicação no GitHub
 

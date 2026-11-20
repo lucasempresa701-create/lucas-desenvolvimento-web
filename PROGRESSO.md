@@ -51,3 +51,12 @@ Todos os comandos terminaram com sucesso. No PowerShell, o VS Code e o npm foram
 - Links internos, carregamento de imagens e abertura direta de `index.html` verificados. A navegação permaneceu visível com JavaScript desativado.
 - Links de telefone e e-mail conferidos no Chrome, incluindo a ordem de foco pelo teclado. A verificação não acionou ligação ou envio de e-mail.
 - Console e recursos carregados sem erros durante os testes. Nenhum teste foi feito em dispositivo móvel físico ou leitor de tela.
+
+## Fase 2 — Sites demonstrativos
+
+- Lucas vai concluir os ajustes do CineVault antes de incluí-lo no portfólio.
+- A primeira demonstração usa a marca fictícia Barbearia Fio de Rua. A página local apresenta serviços, preços e horários ilustrativos e simula o agendamento sem pedir dados pessoais.
+- A versão local do portfólio inclui uma seção Projetos com link para a demonstração.
+- No Chrome, a demonstração foi conferida em 11 larguras de 320 a 1440 px, incluindo ida e volta pelo portfólio, navegação por teclado e acesso direto ao arquivo. O formulário bloqueou datas passadas e dias fechados e ofereceu horários compatíveis com a duração do serviço.
+- A primeira demonstração está pronta para revisão local antes da publicação.
+- A cafeteria é a segunda demonstração prevista no roadmap.

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Site demonstrativo de uma barbearia, com serviços, horários e simulação de agendamento.">
+  <meta name="theme-color" content="#1c211b">
+  <title>Barbearia Fio de Rua | Site demonstrativo</title>
+  <link rel="icon" type="image/png" href="../../assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Ir para o conteúdo</a>
+
+  <div class="demo-bar">
+    <div class="layout demo-bar-inner">
+      <span>Site demonstrativo</span>
+      <a href="../../index.html#projetos">Voltar ao portfólio</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="layout header-inner">
+      <a class="wordmark" href="#inicio">Fio de Rua</a>
+      <nav class="main-nav" aria-label="Principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#horarios">Horários</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio" tabindex="-1">
+    <section class="layout hero" aria-labelledby="titulo">
+      <div>
+        <p class="eyebrow">Barbearia</p>
+        <h1 id="titulo">Corte <span>no ponto.</span></h1>
+        <p class="hero-intro">Corte, barba e acabamento com hora marcada. Escolha um serviço e experimente como seria reservar seu horário.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#agendamento">Simular agendamento</a>
+          <a class="button secondary" href="#servicos">Ver serviços</a>
+        </div>
+      </div>
+      <img class="shop-photo" src="assets/interior-barbearia.jpg" width="1200" height="800"
+           alt="Cadeira de barbeiro de couro preto ao lado de uma bancada de madeira e um espelho." fetchpriority="high">
+    </section>
+
+    <section id="servicos" class="services" aria-labelledby="titulo-servicos" tabindex="-1">
+      <div class="layout section-inner">
+        <div class="section-heading">
+          <h2 id="titulo-servicos">Serviços</h2>
+          <p>Preços e durações ilustrativos.</p>
+        </div>
+        <ul class="service-list" role="list">
+          <li>
+            <h3>Corte</h3>
+            <p>Tesoura ou máquina, com acabamento na nuca e nas laterais.</p>
+            <p class="service-detail"><strong>R$ 55</strong> <span>40 min</span></p>
+          </li>
+          <li>
+            <h3>Barba</h3>
+            <p>Toalha quente, alinhamento e definição do contorno.</p>
+            <p class="service-detail"><strong>R$ 40</strong> <span>30 min</span></p>
+          </li>
+          <li>
+            <h3>Corte e barba</h3>
+            <p>Os dois serviços em uma única visita.</p>
+            <p class="service-detail"><strong>R$ 85</strong> <span>60 min</span></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="agendamento" class="layout section-inner booking" aria-labelledby="titulo-agendamento" tabindex="-1">
+      <div class="hours">
+        <h2 id="horarios" tabindex="-1">Horários</h2>
+        <dl>
+          <div><dt>Terça a sexta</dt><dd>10h às 19h</dd></div>
+          <div><dt>Sábado</dt><dd>9h às 17h</dd></div>
+          <div><dt>Domingo e segunda</dt><dd>Fechado</dd></div>
+        </dl>
+      </div>
+
+      <div class="booking-panel">
+        <h2 id="titulo-agendamento">Simule uma reserva</h2>
+        <p>Teste o fluxo com horários de exemplo. A simulação não registra reservas nem pede dados pessoais.</p>
+        <form id="booking-form" hidden>
+          <div class="field full">
+            <label for="service">Serviço</label>
+            <select id="service" name="service" required>
+              <option value="">Selecione um serviço</option>
+              <option value="corte" data-duration="40">Corte</option>
+              <option value="barba" data-duration="30">Barba</option>
+              <option value="combo" data-duration="60">Corte e barba</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="date">Data</label>
+            <input type="date" id="date" name="date" aria-describedby="booking-hint" required>
+          </div>
+          <div class="field">
+            <label for="time">Horário</label>
+            <select id="time" name="time" aria-describedby="booking-hint" required disabled>
+              <option value="">Selecione um horário</option>
+            </select>
+          </div>
+          <p id="booking-hint" class="hint full" role="status">Escolha um serviço e uma data para ver os horários.</p>
+          <button class="button primary full" type="submit" disabled>Simular reserva</button>
+          <p id="booking-result" class="booking-result full" role="status"></p>
+        </form>
+        <noscript><p class="noscript-note">Ative o JavaScript no navegador para testar o agendamento.</p></noscript>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="layout footer-inner">
+      <p>Fio de Rua é uma barbearia fictícia. Demonstração criada por Lucas Oliveira Santos.</p>
+      <a href="../../index.html#projetos">Voltar ao portfólio</a>
+    </div>
+  </footer>
+</body>
+</html>
