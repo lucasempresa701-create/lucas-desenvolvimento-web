@@ -1,7 +1,10 @@
 const form = document.querySelector("#booking-form");
 const serviceField = form.elements.namedItem("service");
-const dateField = form.elements.namedItem("date");
-const timeField = form.elements.namedItem("time");
+const dateOptions = document.querySelector("#date-options");
+const timeOptions = document.querySelector("#time-options");
+const dateRange = document.querySelector("#date-range");
+const previousDates = document.querySelector("#previous-dates");
+const nextDates = document.querySelector("#next-dates");
 const submitButton = form.querySelector('button[type="submit"]');
 const hint = document.querySelector("#booking-hint");
 const result = document.querySelector("#booking-result");
@@ -10,88 +13,145 @@ const dateFormatter = new Intl.DateTimeFormat("pt-BR", {
   dateStyle: "long",
   timeZone: "UTC",
 });
+const dateLabel = new Intl.DateTimeFormat("pt-BR", {
+  weekday: "short",
+  day: "2-digit",
+  month: "2-digit",
+  timeZone: "UTC",
+});
+const dateRangeLabel = new Intl.DateTimeFormat("pt-BR", {
+  dateStyle: "medium",
+  timeZone: "UTC",
+});
 
-function dateInputValue(date) {
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${date.getFullYear()}-${month}-${day}`;
+let datePage = 0;
+
+function localCalendarDay(now) {
+  return new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
 }
 
-function refreshTimes() {
+function isClosed(day) {
+  return day.getUTCDay() < 2;
+}
+
+function choice(name, value, label) {
+  const container = document.createElement("label");
+  container.className = "booking-choice";
+  const field = document.createElement("input");
+  field.type = "radio";
+  field.name = name;
+  field.value = value;
+  field.required = true;
+  const caption = document.createElement("span");
+  caption.textContent = label;
+  container.append(field, caption);
+  return container;
+}
+
+function showDates() {
+  // Cada página mostra os cinco dias de atendimento de um intervalo de sete dias.
+  const firstDay = localCalendarDay(new Date());
+  firstDay.setUTCDate(firstDay.getUTCDate() + datePage * 7);
+  const openDays = [];
+  for (let offset = 0; offset < 7; offset++) {
+    const day = new Date(firstDay);
+    day.setUTCDate(day.getUTCDate() + offset);
+    if (!isClosed(day)) openDays.push(day);
+  }
+
+  dateOptions.replaceChildren(...openDays.map(day =>
+    choice("date", day.toISOString().slice(0, 10), dateLabel.format(day))
+  ));
+  dateRange.textContent = dateRangeLabel.formatRange(openDays[0], openDays.at(-1));
+  previousDates.disabled = datePage === 0;
+  showTimes();
+}
+
+function selectedValue(name) {
+  return form.querySelector(`input[name="${name}"]:checked`)?.value ?? "";
+}
+
+function selectedDay() {
+  return new Date(`${selectedValue("date")}T00:00:00Z`);
+}
+
+function availableTimes(day, duration) {
   const now = new Date();
-  dateField.min = dateInputValue(now);
-  dateField.setCustomValidity("");
-  timeField.replaceChildren(new Option("Selecione um horário", ""));
-  timeField.disabled = true;
-  submitButton.disabled = true;
-  result.textContent = "";
-  hint.textContent = "Escolha um serviço e uma data para ver os horários.";
+  const today = localCalendarDay(now);
+  if (!Number.isFinite(day.getTime()) || day < today || isClosed(day) || !duration) return [];
 
-  if (dateField.validity.rangeUnderflow) {
-    hint.textContent = "Escolha uma data de hoje em diante.";
-    return;
-  }
-  if (!dateField.value || !dateField.validity.valid) return;
-
-  // O campo de data representa o dia em UTC, sem a hora local do visitante.
-  const weekday = dateField.valueAsDate.getUTCDay();
-  if (weekday === 0 || weekday === 1) {
-    const message = "A barbearia fecha aos domingos e às segundas. Escolha outro dia.";
-    dateField.setCustomValidity(message);
-    hint.textContent = message;
-    return;
-  }
-  if (!serviceField.value) return;
-
-  const duration = Number(serviceField.selectedOptions[0].dataset.duration);
-  const opening = (weekday === 6 ? 9 : 10) * 60;
-  const closing = (weekday === 6 ? 17 : 19) * 60;
-  const currentMinute = dateField.value === dateField.min
+  const isSaturday = day.getUTCDay() === 6;
+  const opening = (isSaturday ? 9 : 10) * 60;
+  const closing = (isSaturday ? 17 : 19) * 60;
+  const currentMinute = day.getTime() === today.getTime()
     ? now.getHours() * 60 + now.getMinutes()
     : -1;
-
+  const times = [];
   for (let minute = opening; minute + duration <= closing; minute += 30) {
     if (minute <= currentMinute) continue;
     const hours = String(Math.floor(minute / 60)).padStart(2, "0");
     const minutes = String(minute % 60).padStart(2, "0");
-    const label = `${hours}:${minutes}`;
-    timeField.add(new Option(label, label));
+    times.push(`${hours}:${minutes}`);
   }
-
-  timeField.disabled = timeField.options.length === 1;
-  hint.textContent = timeField.disabled
-    ? "Os horários deste dia já passaram. Escolha outra data."
-    : "Escolha um dos horários de exemplo.";
+  return times;
 }
 
-serviceField.addEventListener("change", refreshTimes);
-dateField.addEventListener("input", refreshTimes);
-
-timeField.addEventListener("change", () => {
-  submitButton.disabled = !timeField.value;
+function showTimes() {
+  const duration = Number(serviceField.selectedOptions[0].dataset.duration);
+  const times = availableTimes(selectedDay(), duration);
+  timeOptions.replaceChildren(...times.map(time => choice("time", time, time)));
+  submitButton.disabled = true;
   result.textContent = "";
+
+  if (!duration || !selectedValue("date")) {
+    hint.textContent = "Escolha um serviço e uma data para ver os horários.";
+  } else {
+    hint.textContent = times.length
+      ? "Escolha um dos horários de exemplo abaixo."
+      : "Sem horários disponíveis nesta data. Escolha outra.";
+  }
+}
+
+previousDates.addEventListener("click", () => {
+  datePage--;
+  showDates();
+  if (previousDates.disabled) nextDates.focus();
+});
+
+nextDates.addEventListener("click", () => {
+  datePage++;
+  showDates();
+});
+
+form.addEventListener("change", (event) => {
+  if (event.target.name === "time") {
+    submitButton.disabled = false;
+    result.textContent = "";
+  } else {
+    showTimes();
+  }
 });
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  const time = timeField.value;
-  refreshTimes();
+  const service = serviceField.selectedOptions[0];
+  const day = selectedDay();
+  const time = selectedValue("time");
 
-  // Revalide o horário, pois o minuto atual pode ter mudado com a página aberta.
-  timeField.value = time;
-  if (!timeField.value) {
-    timeField.selectedIndex = 0;
-    if (!timeField.disabled) {
-      hint.textContent = "Este horário deixou de estar disponível. Revise a data e escolha outro.";
+  // A página pode ter ficado aberta até o horário escolhido passar.
+  if (!availableTimes(day, Number(service.dataset.duration)).includes(time)) {
+    showTimes();
+    const firstTime = timeOptions.querySelector("input");
+    if (firstTime) {
+      hint.textContent = "Esse horário passou. Escolha outro horário de exemplo.";
+      firstTime.focus();
     }
     return;
   }
 
-  submitButton.disabled = false;
-  const service = serviceField.selectedOptions[0].textContent;
-  const date = dateFormatter.format(dateField.valueAsDate);
-  result.textContent = `Simulação concluída. ${service} em ${date}, às ${time}. Nenhuma reserva foi registrada.`;
+  const date = dateFormatter.format(day);
+  result.textContent = `Simulação concluída. ${service.textContent} em ${date}, às ${time}. Nenhuma reserva foi registrada.`;
 });
 
-refreshTimes();
+showDates();
 form.hidden = false;

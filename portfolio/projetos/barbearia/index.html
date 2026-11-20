@@ -53,16 +53,22 @@
         </div>
         <ul class="service-list" role="list">
           <li>
+            <img src="assets/servico-corte.jpg" width="780" height="520" loading="lazy"
+                 alt="Cabelo curto com degradê definido na lateral e na nuca.">
             <h3>Corte</h3>
             <p>Tesoura ou máquina, com acabamento na nuca e nas laterais.</p>
             <p class="service-detail"><strong>R$ 55</strong> <span>40 min</span></p>
           </li>
           <li>
+            <img src="assets/servico-barba.jpg" width="780" height="520" loading="lazy"
+                 alt="Barba curta de perfil com o contorno alinhado na bochecha e no pescoço.">
             <h3>Barba</h3>
             <p>Toalha quente, alinhamento e definição do contorno.</p>
             <p class="service-detail"><strong>R$ 40</strong> <span>30 min</span></p>
           </li>
           <li>
+            <img src="assets/servico-corte-e-barba.jpg" width="780" height="520" loading="lazy"
+                 alt="Cliente com cabelo em degradê e barba aparada no mesmo retrato.">
             <h3>Corte e barba</h3>
             <p>Os dois serviços em uma única visita.</p>
             <p class="service-detail"><strong>R$ 85</strong> <span>60 min</span></p>
@@ -85,7 +91,7 @@
         <h2 id="titulo-agendamento">Simule uma reserva</h2>
         <p>Teste o fluxo com horários de exemplo. A simulação não registra reservas nem pede dados pessoais.</p>
         <form id="booking-form" hidden>
-          <div class="field full">
+          <div class="field">
             <label for="service">Serviço</label>
             <select id="service" name="service" required>
               <option value="">Selecione um serviço</option>
@@ -94,19 +100,25 @@
               <option value="combo" data-duration="60">Corte e barba</option>
             </select>
           </div>
-          <div class="field">
-            <label for="date">Data</label>
-            <input type="date" id="date" name="date" aria-describedby="booking-hint" required>
-          </div>
-          <div class="field">
-            <label for="time">Horário</label>
-            <select id="time" name="time" aria-describedby="booking-hint" required disabled>
-              <option value="">Selecione um horário</option>
-            </select>
-          </div>
-          <p id="booking-hint" class="hint full" role="status">Escolha um serviço e uma data para ver os horários.</p>
-          <button class="button primary full" type="submit" disabled>Simular reserva</button>
-          <p id="booking-result" class="booking-result full" role="status"></p>
+
+          <fieldset class="booking-group">
+            <legend>Data</legend>
+            <p id="date-range" class="hint" role="status"></p>
+            <div id="date-options" class="choice-grid dates"></div>
+            <div class="date-navigation">
+              <button id="previous-dates" type="button" aria-controls="date-options" disabled>Datas anteriores</button>
+              <button id="next-dates" type="button" aria-controls="date-options">Próximas datas</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="booking-group" aria-describedby="booking-hint">
+            <legend>Horários disponíveis</legend>
+            <p id="booking-hint" class="hint" role="status">Escolha um serviço e uma data para ver os horários.</p>
+            <div id="time-options" class="choice-grid times"></div>
+          </fieldset>
+
+          <button class="button primary" type="submit" disabled>Simular reserva</button>
+          <p id="booking-result" class="booking-result" role="status"></p>
         </form>
         <noscript><p class="noscript-note">Ative o JavaScript no navegador para testar o agendamento.</p></noscript>
       </div>
