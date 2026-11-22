@@ -1,4 +1,5 @@
 const menu = document.querySelector("#menu-items");
+const featured = document.querySelector("#destaques");
 const filters = document.querySelector("#filters");
 const orderList = document.querySelector("#order-items");
 const orderPanel = document.querySelector("#pedido");
@@ -15,10 +16,17 @@ const products = new Map(Array.from(menu.children, item => [
     element: item,
     name: item.querySelector("h3").textContent,
     price: Number(item.dataset.price),
-    add: item.querySelector("button"),
+    addButtons: [item.querySelector("button")],
   },
 ]));
 const order = new Map();
+
+for (const card of featured.querySelectorAll("[data-featured-item]")) {
+  const product = products.get(card.dataset.featuredItem);
+  card.querySelector("h3").textContent = product.name;
+  card.querySelector("strong").textContent = currency.format(product.price / 100);
+  product.addButtons.push(card.querySelector("button"));
+}
 
 function orderLine(id, quantity, product) {
   const item = document.createElement("li");
@@ -38,8 +46,10 @@ function renderOrder() {
   const lines = [];
   for (const [id, product] of products) {
     const quantity = order.get(id) ?? 0;
-    product.add.textContent = quantity ? `Adicionar (${quantity})` : "Adicionar";
-    product.add.setAttribute("aria-label", `Adicionar ${product.name} ao pedido. Unidades no pedido: ${quantity}.`);
+    for (const button of product.addButtons) {
+      button.textContent = quantity ? `Adicionar (${quantity})` : "Adicionar";
+      button.setAttribute("aria-label", `Adicionar ${product.name} ao pedido. Unidades no pedido: ${quantity}.`);
+    }
     if (quantity === 0) continue;
 
     total += product.price * quantity;
@@ -65,15 +75,11 @@ filters.addEventListener("click", (event) => {
   }
 });
 
-menu.addEventListener("click", (event) => {
-  const button = event.target.closest(".add-button");
-  if (!button) return;
-
-  const id = button.closest(".menu-item").dataset.item;
+function addToOrder(id) {
   order.set(id, (order.get(id) ?? 0) + 1);
   renderOrder();
   orderStatus.textContent = `${products.get(id).name} no pedido. Subtotal ${subtotal.textContent}.`;
-});
+}
 
 orderList.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-remove]");
@@ -102,4 +108,10 @@ finish.addEventListener("click", () => {
 renderOrder();
 filters.hidden = false;
 document.querySelector("#order-controls").hidden = false;
-for (const { add } of products.values()) add.hidden = false;
+for (const [id, product] of products) {
+  for (const button of product.addButtons) {
+    button.addEventListener("click", () => addToOrder(id));
+    button.hidden = false;
+  }
+}
+featured.hidden = false;

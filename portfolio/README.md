@@ -36,9 +36,19 @@ As fotos dos cartões de serviço são ilustrativas e seguem a [licença do Pexe
 
 O [Café Janela da Manhã](projetos/cafeteria/index.html) é fictício. O cardápio pode ser filtrado por categoria, e o pedido de exemplo permite adicionar e remover unidades. O JavaScript soma os preços em centavos e mostra o subtotal em reais. O pedido fica em memória na página e a simulação termina com uma confirmação local.
 
+Os destaques consultam os nomes e preços do cardápio e atualizam o mesmo pedido. Com JavaScript desativado, o cardápio completo continua disponível para leitura.
+
 A [imagem do café](projetos/cafeteria/assets/cafe-da-manha.jpg) foi gerada com a ferramenta ImageGen integrada. A solicitação original foi a seguinte.
 
 > Create a single horizontal 3:2 photorealistic editorial photograph for a fictional Brazilian neighborhood café called Café Janela da Manhã, for use as the website hero. A creamy ceramic cappuccino cup with refined latte art and a small plate of two Brazilian pão de queijo on a light-oak café table, a folded linen napkin, and warm morning sun from a nearby window. Softly blurred background hints at an inviting café with petrol-green glazed tiles and golden wood. Frame both the cup and pão de queijo clearly in the center so they survive a moderately tighter crop. Cheerful, natural editorial food photography, cream, teal, honey wood and soft espresso hues. No lettering, no logo, no watermarks, no people.
+
+O ImageGen também gerou as imagens dos destaques. Foi usado o seguinte trecho comum, seguido da descrição de cada item.
+
+> A single horizontal 3:2 photorealistic editorial product photograph for an original fictional Brazilian neighborhood cafe website. A close three-quarter tabletop composition on light honey oak, warm natural morning window light, cream ceramics and a softly blurred background with a hint of petrol-green tiles. Center the food with breathing room for a tight crop, use convincing natural texture. No people, no text, no logos, no watermarks.
+
+- [Cappuccino](projetos/cafeteria/assets/destaque-cappuccino.jpg) — Only a cappuccino in one cream ceramic cup and saucer, with the surface clearly showing clean latte art. The cup is the unmistakable subject. A simple folded linen napkin may be visible at the edge.
+- [Pão de queijo](projetos/cafeteria/assets/destaque-pao-de-queijo.jpg) — Only two golden Brazilian pães de queijo on a small cream ceramic plate. One roll can be halved to reveal its soft, chewy interior. Both rolls are the unmistakable subject. No cup or other food.
+- [Bolo de laranja](projetos/cafeteria/assets/destaque-bolo-de-laranja.jpg) — Only a single generous slice of homemade Brazilian orange cake on a small cream ceramic plate. Show the orange-colored crumb and a restrained thin citrus glaze. The slice is the unmistakable subject. No cup or other food.
 
 ## Publicação no GitHub
 
