@@ -42,13 +42,11 @@ A [imagem do café](projetos/cafeteria/assets/cafe-da-manha.jpg) foi gerada com 
 
 > Create a single horizontal 3:2 photorealistic editorial photograph for a fictional Brazilian neighborhood café called Café Janela da Manhã, for use as the website hero. A creamy ceramic cappuccino cup with refined latte art and a small plate of two Brazilian pão de queijo on a light-oak café table, a folded linen napkin, and warm morning sun from a nearby window. Softly blurred background hints at an inviting café with petrol-green glazed tiles and golden wood. Frame both the cup and pão de queijo clearly in the center so they survive a moderately tighter crop. Cheerful, natural editorial food photography, cream, teal, honey wood and soft espresso hues. No lettering, no logo, no watermarks, no people.
 
-O ImageGen também gerou as imagens dos destaques. Foi usado o seguinte trecho comum, seguido da descrição de cada item.
+As fotos dos destaques são ilustrativas e foram enquadradas no formato dos cartões.
 
-> A single horizontal 3:2 photorealistic editorial product photograph for an original fictional Brazilian neighborhood cafe website. A close three-quarter tabletop composition on light honey oak, warm natural morning window light, cream ceramics and a softly blurred background with a hint of petrol-green tiles. Center the food with breathing room for a tight crop, use convincing natural texture. No people, no text, no logos, no watermarks.
-
-- [Cappuccino](projetos/cafeteria/assets/destaque-cappuccino.jpg) — Only a cappuccino in one cream ceramic cup and saucer, with the surface clearly showing clean latte art. The cup is the unmistakable subject. A simple folded linen napkin may be visible at the edge.
-- [Pão de queijo](projetos/cafeteria/assets/destaque-pao-de-queijo.jpg) — Only two golden Brazilian pães de queijo on a small cream ceramic plate. One roll can be halved to reveal its soft, chewy interior. Both rolls are the unmistakable subject. No cup or other food.
-- [Bolo de laranja](projetos/cafeteria/assets/destaque-bolo-de-laranja.jpg) — Only a single generous slice of homemade Brazilian orange cake on a small cream ceramic plate. Show the orange-colored crumb and a restrained thin citrus glaze. The slice is the unmistakable subject. No cup or other food.
+- Cappuccino — [Mike Jones no Pexels](https://www.pexels.com/photo/close-up-shot-of-a-cup-of-cappuccino-with-latte-art-on-a-wooden-surface-9050519/) · [Licença Pexels](https://www.pexels.com/license/)
+- Pão de queijo — [Giovanna Kamimura no Pexels](https://www.pexels.com/photo/delicious-brazilian-pao-de-queijo-in-basket-37778433/) · [Licença Pexels](https://www.pexels.com/license/)
+- Bolo de laranja — [Elle inlom no Unsplash](https://unsplash.com/photos/a-piece-of-cake-sitting-on-top-of-a-white-plate-tjq3r3-8f_Y) · [Licença Unsplash](https://unsplash.com/license)
 
 ## Publicação no GitHub
 
