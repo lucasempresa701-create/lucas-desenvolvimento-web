@@ -61,5 +61,6 @@ Todos os comandos terminaram com sucesso. No PowerShell, o VS Code e o npm foram
 - Na revisão, cada serviço ganhou uma foto própria. O formulário passou a listar datas de atendimento e horários de exemplo, com seleção dourada e foco visível.
 - A revisão foi testada no Chrome nas mesmas 11 larguras. Foram conferidos o carregamento das três imagens, a navegação por datas, a escolha pelo teclado e o recálculo quando o horário selecionado expira.
 - A pedido de Lucas, o formulário voltou a usar o calendário do navegador, com entrada direta da data e horários clicáveis. A data de 23/12/2026 foi verificada no Chrome pelo teclado, junto com os bloqueios de datas passadas e dias fechados.
+- Os três cartões agora usam fotografias reais do Pexels, identificadas como imagens ilustrativas. Os créditos e a licença estão no README do portfólio. O carregamento das fotos, o layout e a simulação foram verificados no Chrome.
 - A primeira demonstração está pronta para revisão local antes da publicação.
 - A cafeteria é a segunda demonstração prevista no roadmap.

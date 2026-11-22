@@ -26,13 +26,11 @@ A [fotografia ilustrativa](projetos/barbearia/assets/interior-barbearia.jpg) foi
 
 > Create one horizontal 3:2 photorealistic editorial photograph for the hero of Fio de Rua, a fictional Brazilian neighborhood barbershop website. View from the entrance into a compact, authentic and well-kept barbershop: one black leather vintage barber chair with patina in the right-center foreground, a large rectangular wall mirror with an old walnut frame, an oiled wood counter, neatly arranged combs and tools, and a single warm brass wall lamp. Mid-century detail, limewashed gray-green walls, charcoal and dark olive shadows, amber highlights and soft natural side light, restrained film grain, clean architectural composition. Enough detail and contrast to read at small sizes. No people, no words, no logos, no sign, no watermark.
 
-As três imagens dos serviços também foram geradas com ImageGen. Foi usado o seguinte trecho comum, seguido da descrição correspondente a cada foto.
+As fotos dos cartões de serviço são ilustrativas e seguem a [licença do Pexels](https://www.pexels.com/license/).
 
-> A horizontal 3:2 photorealistic editorial photograph for the service cards of a fictional Brazilian neighborhood barbershop. Authentic, contemporary barbershop mood with charcoal and olive backdrop, warm amber side light, and natural skin and hair texture. Strong readable composition designed for a small website card, with the service centered and safe to crop. No text, no logos, no watermark.
-
-- [Corte](projetos/barbearia/assets/servico-corte.jpg) — Show the back and three-quarter side of an adult male customer's head. Focus tightly on a well-defined low fade from the nape to short textured dark hair, with a barber's comb and hand subtly in frame. Make the haircut the clear subject, with the lower face outside the frame.
-- [Barba](projetos/barbearia/assets/servico-barba.jpg) — Show a mid-close side profile of an adult with a short, dense dark beard, giving priority to the sharply defined cheek and neckline. A barber's hand gently holds a comb near the beard; the top of the head is out of frame. The sculpted beard must be unmistakably the subject.
-- [Corte e barba](projetos/barbearia/assets/servico-corte-e-barba.jpg) — Show a chest-up three-quarter portrait of a different adult male customer with a crisp dark textured fade and a neatly shaped medium-length beard. Frame the full top of his head and jaw together so both the haircut and the beard are equally obvious, with a plain dark cape over his shoulders.
+- Corte — [Kevin Bidwell](https://www.pexels.com/photo/back-view-of-a-person-having-a-haircut-9971240/)
+- Barba — [Gustavo Fring](https://www.pexels.com/photo/barber-trimming-beard-7447145/)
+- Corte e barba — [Antoni Shkraba](https://www.pexels.com/photo/a-barber-shaving-a-man-s-beard-4625615/)
 
 ## Publicação no GitHub
 
