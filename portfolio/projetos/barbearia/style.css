@@ -268,7 +268,8 @@ h3 { font-size: 1.375rem; line-height: 1.25; }
 .field { display: grid; min-width: 0; gap: 0.25rem; }
 .field label, .booking-group legend { font-weight: 700; }
 
-.field select {
+.field select,
+.field input {
   width: 100%;
   min-width: 0;
   min-height: 2.875rem;
@@ -293,7 +294,6 @@ h3 { font-size: 1.375rem; line-height: 1.25; }
 }
 
 .choice-grid:empty { margin-top: 0; }
-.choice-grid.dates { grid-template-columns: repeat(auto-fill, minmax(min(100%, 6.25rem), 1fr)); }
 .choice-grid.times { grid-template-columns: repeat(auto-fill, minmax(min(100%, 4.25rem), 1fr)); }
 
 .booking-choice { position: relative; min-width: 0; }
@@ -308,8 +308,7 @@ h3 { font-size: 1.375rem; line-height: 1.25; }
   cursor: pointer;
 }
 
-.booking-choice span,
-.date-navigation button {
+.booking-choice span {
   display: flex;
   min-height: 2.75rem;
   align-items: center;
@@ -323,28 +322,11 @@ h3 { font-size: 1.375rem; line-height: 1.25; }
 
 .booking-choice:hover span { border-color: var(--gold); }
 .booking-choice input:checked + span { border-color: var(--gold); background: var(--gold); color: var(--dark); }
-.booking-choice input:focus-visible + span,
-.date-navigation button:focus-visible {
+.booking-choice input:focus-visible + span {
   outline: 2px solid var(--gold);
   outline-offset: 2px;
 }
 
-.date-navigation {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.date-navigation button {
-  background: transparent;
-  color: var(--light);
-  cursor: pointer;
-}
-
-.date-navigation button:hover:not(:disabled) { border-color: var(--gold); color: var(--gold); }
-.date-navigation button:disabled { border-color: var(--dark-rule); color: var(--light-muted); cursor: default; }
 .booking-result:empty { margin-top: -1.125rem; }
 
 .booking-result:not(:empty) {

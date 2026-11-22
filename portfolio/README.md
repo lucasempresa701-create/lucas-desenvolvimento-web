@@ -20,7 +20,7 @@ No Explorador de Arquivos, abra a pasta do projeto, entre em `portfolio` e dê d
 
 A [Barbearia Fio de Rua](projetos/barbearia/index.html) é fictícia. A identidade escura com verde e dourado diferencia a demonstração do portfólio editorial claro.
 
-O HTML apresenta serviços com fotografias, durações e horários. O JavaScript exibe cinco datas de atendimento por vez. Após a escolha do serviço e da data, o formulário apresenta os horários em opções clicáveis, de 30 em 30 minutos, desde que o serviço caiba antes do fechamento. O resumo aparece no navegador, sem coleta de dados ou criação de reservas.
+O HTML apresenta serviços com fotografias, durações e horários. O campo Data permite digitar uma data ou selecioná-la no calendário do navegador. Após a escolha do serviço e da data, o formulário apresenta os horários em opções clicáveis, de 30 em 30 minutos, desde que o serviço caiba antes do fechamento. O resumo aparece no navegador, sem coleta de dados ou criação de reservas.
 
 A [fotografia ilustrativa](projetos/barbearia/assets/interior-barbearia.jpg) foi gerada com a ferramenta ImageGen integrada. A solicitação original foi a seguinte.
 

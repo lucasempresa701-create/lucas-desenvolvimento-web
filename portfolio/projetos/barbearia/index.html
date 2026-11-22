@@ -101,15 +101,10 @@
             </select>
           </div>
 
-          <fieldset class="booking-group">
-            <legend>Data</legend>
-            <p id="date-range" class="hint" role="status"></p>
-            <div id="date-options" class="choice-grid dates"></div>
-            <div class="date-navigation">
-              <button id="previous-dates" type="button" aria-controls="date-options" disabled>Datas anteriores</button>
-              <button id="next-dates" type="button" aria-controls="date-options">Próximas datas</button>
-            </div>
-          </fieldset>
+          <div class="field">
+            <label for="date">Data</label>
+            <input type="date" id="date" name="date" aria-describedby="booking-hint" required>
+          </div>
 
           <fieldset class="booking-group" aria-describedby="booking-hint">
             <legend>Horários disponíveis</legend>
