@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Café Janela da Manhã, demonstração de um site de cafeteria com cardápio e pedido para retirada.">
+  <meta name="theme-color" content="#fff8ee">
+  <title>Café Janela da Manhã | Site demonstrativo</title>
+  <link rel="icon" type="image/png" href="../../assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Ir para o conteúdo</a>
+  <div class="demo-bar">
+    <div class="layout bar-inner">
+      <span>Site demonstrativo</span>
+      <a href="../../index.html#projetos">Voltar ao portfólio</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="layout bar-inner">
+      <a class="wordmark" href="#inicio">Café Janela da Manhã</a>
+      <nav aria-label="Principal">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#horarios">Horários</a>
+        <a href="#pedido">Meu pedido</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio" tabindex="-1">
+    <section class="layout hero" aria-labelledby="titulo">
+      <div>
+        <p class="eyebrow">Cafeteria de bairro</p>
+        <h1 id="titulo">Café passado.<br>Mesa posta.</h1>
+        <p class="hero-intro">Espresso, pão na chapa e bolo do dia. Explore o cardápio e monte uma comanda de exemplo para retirada.</p>
+        <a class="button primary" href="#cardapio">Ver cardápio</a>
+      </div>
+      <img class="hero-image" src="assets/cafe-da-manha.jpg" width="1200" height="800"
+           alt="Cappuccino em uma xícara de cerâmica e pães de queijo sobre uma mesa de madeira." fetchpriority="high">
+    </section>
+
+    <section id="cardapio" class="menu-section" aria-labelledby="titulo-cardapio" tabindex="-1">
+      <div class="layout menu-layout">
+        <div>
+          <h2 id="titulo-cardapio">Cardápio</h2>
+          <p class="section-note">Preços ilustrativos.</p>
+          <div id="filters" class="filters" role="group" aria-label="Categorias do cardápio" hidden>
+            <button type="button" data-filter="todos" aria-pressed="true">Todos</button>
+            <button type="button" data-filter="cafes" aria-pressed="false">Cafés</button>
+            <button type="button" data-filter="padaria" aria-pressed="false">Padaria</button>
+          </div>
+          <ul id="menu-items" class="menu-list" role="list">
+            <li class="menu-item" data-item="espresso" data-category="cafes" data-price="900">
+              <div>
+                <h3>Espresso duplo</h3>
+                <p>Duas doses de espresso.</p>
+              </div>
+              <div class="item-actions">
+                <strong>R$ 9,00</strong>
+                <button class="add-button" type="button" hidden>Adicionar</button>
+              </div>
+            </li>
+            <li class="menu-item" data-item="cappuccino" data-category="cafes" data-price="1500">
+              <div>
+                <h3>Cappuccino</h3>
+                <p>Espresso com leite vaporizado e espuma cremosa.</p>
+              </div>
+              <div class="item-actions">
+                <strong>R$ 15,00</strong>
+                <button class="add-button" type="button" hidden>Adicionar</button>
+              </div>
+            </li>
+            <li class="menu-item" data-item="coado" data-category="cafes" data-price="1100">
+              <div>
+                <h3>Café coado</h3>
+                <p>Uma xícara de café preparado no filtro.</p>
+              </div>
+              <div class="item-actions">
+                <strong>R$ 11,00</strong>
+                <button class="add-button" type="button" hidden>Adicionar</button>
+              </div>
+            </li>
+            <li class="menu-item" data-item="chapa" data-category="padaria" data-price="800">
+              <div>
+                <h3>Pão na chapa</h3>
+                <p>Pão francês dourado na manteiga.</p>
+              </div>
+              <div class="item-actions">
+                <strong>R$ 8,00</strong>
+                <button class="add-button" type="button" hidden>Adicionar</button>
+              </div>
+            </li>
+            <li class="menu-item" data-item="queijo" data-category="padaria" data-price="950">
+              <div>
+                <h3>Pão de queijo</h3>
+                <p>Porção com duas unidades, servidas quentes.</p>
+              </div>
+              <div class="item-actions">
+                <strong>R$ 9,50</strong>
+                <button class="add-button" type="button" hidden>Adicionar</button>
+              </div>
+            </li>
+            <li class="menu-item" data-item="bolo" data-category="padaria" data-price="1200">
+              <div>
+                <h3>Bolo de laranja</h3>
+                <p>Uma fatia de bolo com calda cítrica.</p>
+              </div>
+              <div class="item-actions">
+                <strong>R$ 12,00</strong>
+                <button class="add-button" type="button" hidden>Adicionar</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <aside id="pedido" class="order" aria-labelledby="titulo-pedido" tabindex="-1">
+          <h2 id="titulo-pedido">Meu pedido</h2>
+          <p class="section-note">Simulação de retirada. Nenhum pedido será enviado.</p>
+          <div id="order-controls" hidden>
+            <p id="order-empty">Seu pedido está vazio.</p>
+            <ul id="order-items" class="order-list" role="list"></ul>
+            <div class="order-total">
+              <span>Subtotal</span>
+              <strong id="subtotal">R$ 0,00</strong>
+            </div>
+            <button id="finish-order" class="button primary" type="button" disabled>Simular retirada</button>
+            <p id="confirmation" role="status"></p>
+          </div>
+          <p id="order-status" class="visually-hidden" role="status"></p>
+          <noscript><p class="section-note">Ative o JavaScript para experimentar a simulação.</p></noscript>
+        </aside>
+      </div>
+    </section>
+
+    <section id="horarios" class="hours-section" aria-labelledby="titulo-horarios" tabindex="-1">
+      <div class="layout hours-layout">
+        <div>
+          <h2 id="titulo-horarios">Horários</h2>
+          <p class="section-note">Expediente ilustrativo da cafeteria.</p>
+        </div>
+        <dl class="hours-list">
+          <div><dt>Terça a sexta</dt><dd>8h às 18h</dd></div>
+          <div><dt>Sábado e domingo</dt><dd>9h às 16h</dd></div>
+          <div><dt>Segunda</dt><dd>Fechado</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="layout bar-inner">
+      <p>Cafeteria fictícia. Demonstração criada por Lucas Oliveira Santos.</p>
+      <a href="../../index.html#projetos">Voltar ao portfólio</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -32,6 +32,14 @@ As fotos dos cartões de serviço são ilustrativas e seguem a [licença do Pexe
 - Barba — [Gustavo Fring](https://www.pexels.com/photo/barber-trimming-beard-7447145/)
 - Corte e barba — [Antoni Shkraba](https://www.pexels.com/photo/a-barber-shaving-a-man-s-beard-4625615/)
 
+## Demonstração da cafeteria
+
+O [Café Janela da Manhã](projetos/cafeteria/index.html) é fictício. O cardápio pode ser filtrado por categoria, e o pedido de exemplo permite adicionar e remover unidades. O JavaScript soma os preços em centavos e mostra o subtotal em reais. O pedido fica em memória na página e a simulação termina com uma confirmação local.
+
+A [imagem do café](projetos/cafeteria/assets/cafe-da-manha.jpg) foi gerada com a ferramenta ImageGen integrada. A solicitação original foi a seguinte.
+
+> Create a single horizontal 3:2 photorealistic editorial photograph for a fictional Brazilian neighborhood café called Café Janela da Manhã, for use as the website hero. A creamy ceramic cappuccino cup with refined latte art and a small plate of two Brazilian pão de queijo on a light-oak café table, a folded linen napkin, and warm morning sun from a nearby window. Softly blurred background hints at an inviting café with petrol-green glazed tiles and golden wood. Frame both the cup and pão de queijo clearly in the center so they survive a moderately tighter crop. Cheerful, natural editorial food photography, cream, teal, honey wood and soft espresso hues. No lettering, no logo, no watermarks, no people.
+
 ## Publicação no GitHub
 
 A autoria local já usa o endereço `noreply` do GitHub. Para configurar um repositório remoto pela primeira vez, crie um repositório vazio no GitHub, sem README, licença ou `.gitignore` gerados. Na raiz do projeto, configure a URL real e envie a branch `main`.
