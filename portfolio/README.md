@@ -54,6 +54,12 @@ O [Pata de Casa](projetos/pet-shop/index.html) é um pet shop fictício focado e
 
 A foto de abertura é ilustrativa e foi enquadrada para o site. [Foto de Gustavo Fring no Pexels](https://www.pexels.com/photo/close-up-photo-of-a-dog-being-groomed-6816850/) · [Licença Pexels](https://www.pexels.com/license/)
 
+Os cartões também usam fotos ilustrativas enquadradas para o site, sob a [licença do Pexels](https://www.pexels.com/license/).
+
+- Banho — [Tima Miroshnichenko](https://www.pexels.com/photo/close-up-photo-of-bathing-of-dog-6131165/)
+- Banho e tosa — [Mia X](https://www.pexels.com/photo/groomer-working-with-white-dog-16465562/)
+- Tosa higiênica — [Goochie Poochie Grooming](https://www.pexels.com/photo/woman-hand-trimming-dog-19145880/)
+
 ## Publicação no GitHub
 
 A autoria local já usa o endereço `noreply` do GitHub. Para configurar um repositório remoto pela primeira vez, crie um repositório vazio no GitHub, sem README, licença ou `.gitignore` gerados. Na raiz do projeto, configure a URL real e envie a branch `main`.
