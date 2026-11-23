@@ -75,4 +75,5 @@ Todos os comandos terminaram com sucesso. No PowerShell, o VS Code e o npm foram
 - O [Pata de Casa](portfolio/projetos/pet-shop/index.html) é a terceira demonstração. É um pet shop fictício focado em banho e tosa para cães, com horários e estimativa por serviço e porte.
 - O cartão foi incluído no portfólio local. O Chrome conferiu nove larguras de tela, acesso pelo portfólio, uso pelo teclado e as nove combinações do simulador.
 - Os serviços de banho, banho e tosa e tosa higiênica ganharam fotografias do Pexels, com créditos no README. O carregamento e o layout dos cartões foram conferidos no Chrome em telas largas e estreitas.
-- O pet shop está pronto para revisão local antes da publicação. Pizzaria e pastelaria são opções para ampliar a coleção a cinco demonstrações.
+- O [Pata de Casa](https://lucasempresa701-create.github.io/lucas-desenvolvimento-web/projetos/pet-shop/) foi publicado na seção Projetos. O [deploy](https://github.com/lucasempresa701-create/lucas-desenvolvimento-web/actions/runs/45097012082) foi concluído e as fotos e as nove combinações do simulador foram conferidas no endereço público.
+- Pizzaria e pastelaria são opções para ampliar a coleção a cinco demonstrações.
