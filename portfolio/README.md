@@ -48,6 +48,12 @@ As fotos dos destaques são ilustrativas e foram enquadradas no formato dos cart
 - Pão de queijo — [Giovanna Kamimura no Pexels](https://www.pexels.com/photo/delicious-brazilian-pao-de-queijo-in-basket-37778433/) · [Licença Pexels](https://www.pexels.com/license/)
 - Bolo de laranja — [Elle inlom no Unsplash](https://unsplash.com/photos/a-piece-of-cake-sitting-on-top-of-a-white-plate-tjq3r3-8f_Y) · [Licença Unsplash](https://unsplash.com/license)
 
+## Demonstração do pet shop
+
+O [Pata de Casa](projetos/pet-shop/index.html) é um pet shop fictício focado em banho e tosa para cães. Os valores são definidos nas opções de serviço no HTML. O JavaScript lê o valor para o porte escolhido e o apresenta em reais. A simulação funciona na página, sem envio de dados ou agendamento.
+
+A foto de abertura é ilustrativa e foi enquadrada para o site. [Foto de Gustavo Fring no Pexels](https://www.pexels.com/photo/close-up-photo-of-a-dog-being-groomed-6816850/) · [Licença Pexels](https://www.pexels.com/license/)
+
 ## Publicação no GitHub
 
 A autoria local já usa o endereço `noreply` do GitHub. Para configurar um repositório remoto pela primeira vez, crie um repositório vazio no GitHub, sem README, licença ou `.gitignore` gerados. Na raiz do projeto, configure a URL real e envie a branch `main`.

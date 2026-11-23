@@ -69,3 +69,9 @@ Todos os comandos terminaram com sucesso. No PowerShell, o VS Code e o npm foram
 - As imagens dos três destaques foram substituídas por fotografias reais do Pexels e do Unsplash, com créditos e licenças no README. A nova versão foi conferida no Chrome em nove larguras de tela, incluindo o pedido de exemplo.
 - O [Café Janela da Manhã](https://lucasempresa701-create.github.io/lucas-desenvolvimento-web/projetos/cafeteria/) foi publicado na seção Projetos com as fotos reais nos destaques. O [deploy](https://github.com/lucasempresa701-create/lucas-desenvolvimento-web/actions/runs/45041915395), as imagens, os filtros e a simulação de retirada foram conferidos no endereço público.
 - A Fase 2 foi concluída com as duas demonstrações publicadas. A próxima fase é a pesquisa e abordagem manual de pequenos comércios.
+
+## Ampliação do portfólio
+
+- O [Pata de Casa](portfolio/projetos/pet-shop/index.html) é a terceira demonstração. É um pet shop fictício focado em banho e tosa para cães, com horários e estimativa por serviço e porte.
+- O cartão foi incluído no portfólio local. O Chrome conferiu nove larguras de tela, acesso pelo portfólio, uso pelo teclado e as nove combinações do simulador.
+- O pet shop está pronto para revisão local antes da publicação. Pizzaria e pastelaria são opções para ampliar a coleção a cinco demonstrações.

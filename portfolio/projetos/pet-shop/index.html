@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pata de Casa, demonstração de um pet shop com serviços de banho e tosa e simulação de preço.">
+  <meta name="theme-color" content="#f4efff">
+  <title>Pata de Casa | Pet shop demonstrativo</title>
+  <link rel="icon" type="image/png" href="../../assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Ir para o conteúdo</a>
+  <div class="demo-bar">
+    <div class="layout bar-inner">
+      <span>Site demonstrativo</span>
+      <a href="../../index.html#projetos">Voltar ao portfólio</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="layout bar-inner">
+      <a class="wordmark" href="#inicio">Pata de Casa</a>
+      <nav aria-label="Principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#estimativa">Estimativa</a>
+        <a href="#horarios">Horários</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio" tabindex="-1">
+    <section class="layout hero" aria-labelledby="titulo">
+      <div>
+        <p class="eyebrow">Pet shop de bairro</p>
+        <h1 id="titulo">Banho e tosa <span>para o seu cão.</span></h1>
+        <p class="hero-intro">Veja o que está incluído em cada serviço e simule o valor de acordo com o porte do seu cão.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#estimativa">Simular valor</a>
+          <a class="button secondary" href="#servicos">Ver serviços</a>
+        </div>
+      </div>
+      <img class="hero-photo" src="assets/cao-banho-e-tosa.jpg" width="1200" height="900" fetchpriority="high"
+           alt="Um Yorkshire Terrier sendo penteado em uma mesa de banho e tosa.">
+    </section>
+
+    <section id="servicos" class="services" aria-labelledby="titulo-servicos" tabindex="-1">
+      <div class="layout section-inner">
+        <h2 id="titulo-servicos">Serviços</h2>
+        <ul class="service-list" role="list">
+          <li>
+            <h3>Banho</h3>
+            <p>Banho, secagem e escovação da pelagem.</p>
+          </li>
+          <li>
+            <h3>Banho e tosa</h3>
+            <p>Banho, secagem e corte da pelagem conforme o acabamento escolhido.</p>
+          </li>
+          <li>
+            <h3>Tosa higiênica</h3>
+            <p>Aparo localizado dos pelos nas áreas de higiene.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="layout section-inner details">
+      <section id="estimativa" class="estimate" aria-labelledby="titulo-estimativa" tabindex="-1">
+        <h2 id="titulo-estimativa">Simule o valor</h2>
+        <p class="section-note">Valores ilustrativos. A simulação acontece na página, sem enviar dados ou marcar atendimento.</p>
+        <div id="estimate-controls" hidden>
+          <div class="estimate-fields">
+            <div class="field">
+              <label for="service">Serviço</label>
+              <select id="service">
+                <option value="">Selecione um serviço</option>
+                <option value="banho" data-pequeno="50" data-medio="68" data-grande="92">Banho</option>
+                <option value="banho-e-tosa" data-pequeno="86" data-medio="112" data-grande="145">Banho e tosa</option>
+                <option value="tosa-higienica" data-pequeno="40" data-medio="52" data-grande="65">Tosa higiênica</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="size">Porte do cão</label>
+              <select id="size">
+                <option value="">Selecione um porte</option>
+                <option value="pequeno">Pequeno</option>
+                <option value="medio">Médio</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+          </div>
+          <p id="estimate-result" class="estimate-result" role="status">Escolha um serviço e um porte para ver o valor.</p>
+        </div>
+        <noscript><p class="section-note">Ative o JavaScript para experimentar a simulação.</p></noscript>
+      </section>
+
+      <section id="horarios" class="hours" aria-labelledby="titulo-horarios" tabindex="-1">
+        <h2 id="titulo-horarios">Horários</h2>
+        <p class="section-note">Expediente ilustrativo do pet shop.</p>
+        <dl class="hours-list">
+          <div><dt>Terça a sexta</dt><dd>9h às 18h</dd></div>
+          <div><dt>Sábado</dt><dd>9h às 15h</dd></div>
+          <div><dt>Domingo e segunda</dt><dd>Fechado</dd></div>
+        </dl>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="layout bar-inner">
+      <p>Pet shop fictício. Demonstração criada por Lucas Oliveira Santos.</p>
+      <a href="../../index.html#projetos">Voltar ao portfólio</a>
+    </div>
+  </footer>
+</body>
+</html>
